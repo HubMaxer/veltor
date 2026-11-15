@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-discover-btn');
 
-  /* ------------------------------------------------------------------------
-     1. Floating Navigation & Mobile Menu Overlay
-     ------------------------------------------------------------------------ */
   const setMenuState = (open) => {
     if (!burgerBtn || !mobileMenu) return;
     burgerBtn.classList.toggle('is-active', open);
@@ -42,9 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ------------------------------------------------------------------------
-     2. Live Watch Dial Movement (Hero CSS Timepiece)
-     ------------------------------------------------------------------------ */
   const hourHand = document.getElementById('hero-hour');
   const minuteHand = document.getElementById('hero-minute');
   const secondHand = document.getElementById('hero-second');
@@ -74,9 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateWatchHands();
 
-  /* ------------------------------------------------------------------------
-     3. Bidirectional Scroll Reveal via Intersection Observer
-     ------------------------------------------------------------------------ */
   const revealElements = document.querySelectorAll('.reveal');
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
@@ -103,9 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach((el) => revealObserver.observe(el));
   }
 
-  /* ------------------------------------------------------------------------
-     4. Timepiece Detail Modal
-     ------------------------------------------------------------------------ */
   const TIMEPIECES = {
     classic: {
       ref: 'Ref. VL-01',
@@ -233,9 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ------------------------------------------------------------------------
-     5. Private Salon Appointment Form
-     ------------------------------------------------------------------------ */
   const form = document.getElementById('appointment-form');
   const feedback = document.getElementById('form-feedback');
 
