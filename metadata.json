@@ -1,6 +1,0 @@
-{
-  "name": "VELTOR — Swiss Haute Horlogerie",
-  "description": "Luxury Swiss watchmaking house crafting precision Grade 5 titanium and 18k gold timepieces.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
