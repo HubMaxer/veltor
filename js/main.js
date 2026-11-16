@@ -76,19 +76,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const TIMEPIECES = {
     classic: {
-      ref: 'Ref. VL-01', material: '18k Rose Gold', title: 'Classic', price: 'CHF 28,400', selectValue: 'Classic (Ref. VL-01)',
-      desc: 'An exercise in pure proportion. The Classic houses our ultra-thin hand-wound Calibre V-192 inside a mirror-beveled 39mm 18k rose gold case with a deep obsidian lacquer dial.',
-      specs: [{ label: 'Calibre', value: 'V-192 Manual' }, { label: 'Case Diameter', value: '39.0 mm' }, { label: 'Power Reserve', value: '72 Hours' }, { label: 'Water Resistance', value: '50 Meters' }],
+      ref: 'Арт. VL-01',
+      material: '18к Розовое золото',
+      title: 'Classic',
+      price: 'CHF 28,400',
+      selectValue: 'Classic (Арт. VL-01)',
+      desc: 'Ультратонкий 39-мм корпус, ручные золотые метки, обсидиановый циферблат и 72-часовой запас хода.',
+      specs: [
+        { label: 'Калибр', value: 'V-192 Ручной' },
+        { label: 'Диаметр', value: '39.0 мм' },
+        { label: 'Запас хода', value: '72 часа' },
+        { label: 'Водозащита', value: '50 метров' }
+      ],
     },
     sport: {
-      ref: 'Ref. VL-04', material: 'Grade 5 Titanium', title: 'Sport', price: 'CHF 34,900', selectValue: 'Sport (Ref. VL-04)',
-      desc: 'Machined from solid aerospace Grade 5 titanium, the Sport unites chronometric discipline with extreme endurance, featuring a ceramic tachymeter bezel and integrated screw-down crown.',
-      specs: [{ label: 'Calibre', value: 'V-410 Automatic' }, { label: 'Case Diameter', value: '41.5 mm' }, { label: 'Power Reserve', value: '72 Hours' }, { label: 'Water Resistance', value: '300 Meters' }],
+      ref: 'Арт. VL-04',
+      material: 'Титан Grade 5',
+      title: 'Sport',
+      price: 'CHF 34,900',
+      selectValue: 'Sport (Арт. VL-04)',
+      desc: '41-мм корпус из титана для экстремальных условий. Керамический безель, завинчивающаяся головка и 300м водозащиты.',
+      specs: [
+        { label: 'Калибр', value: 'V-410 Автоматический' },
+        { label: 'Диаметр', value: '41.5 мм' },
+        { label: 'Запас хода', value: '72 часа' },
+        { label: 'Водозащита', value: '300 метров' }
+      ],
     },
     phantom: {
-      ref: 'Ref. VL-09', material: 'Forged Carbon & DLC', title: 'Phantom', price: 'CHF 42,500', selectValue: 'Phantom (Ref. VL-09)',
-      desc: 'Stealth architecture paired with warm gold micro-mechanics. Micro-blasted DLC titanium frames recessed gold bridges beneath a glare-free domed sapphire crystal.',
-      specs: [{ label: 'Calibre', value: 'V-900 Openworked' }, { label: 'Case Diameter', value: '41.0 mm' }, { label: 'Power Reserve', value: '80 Hours' }, { label: 'Water Resistance', value: '100 Meters' }],
+      ref: 'Арт. VL-09',
+      material: 'Кованый карбон и DLC',
+      title: 'Phantom',
+      price: 'CHF 42,500',
+      selectValue: 'Phantom (Арт. VL-09)',
+      desc: 'Скрытный дизайн в титане с DLC-покрытием. Утопленные золотые мосты и антибликовое сапфировое стекло.',
+      specs: [
+        { label: 'Калибр', value: 'V-900 Открытый' },
+        { label: 'Диаметр', value: '41.0 мм' },
+        { label: 'Запас хода', value: '80 часов' },
+        { label: 'Водозащита', value: '100 метров' }
+      ],
     },
   };
 
@@ -162,19 +189,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     if (!name) {
-      feedback.textContent = 'Please enter your full name.';
+      feedback.textContent = 'Пожалуйста, введите ваше имя.';
       feedback.classList.add('is-error');
       nameInput?.focus();
       return;
     }
     if (!emailValid) {
-      feedback.textContent = 'Please provide a valid email address.';
+      feedback.textContent = 'Пожалуйста, введите корректный email.';
       feedback.classList.add('is-error');
       emailInput?.focus();
       return;
     }
     feedback.classList.remove('is-error');
-    feedback.textContent = `Thank you, ${name}. Our Geneva concierge will confirm your private viewing for ${model}.`;
+    feedback.textContent = `Спасибо, ${name}. Наш консьерж в Женеве свяжется с вами для подтверждения просмотра модели ${model}.`;
     form.reset();
   });
 });
